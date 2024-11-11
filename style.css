@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 5px;
+    width: 250px;
+    margin: 20px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.cell {
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.correct {
+    background-color: #d4edda;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+}
+
+/* Centralize and position the autocomplete list above the whole grid */
+.autocomplete-list {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    background-color: white;
+    position: absolute;
+    top: -180px; /* Adjust position above the table */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    z-index: 10;
+}
+
+.autocomplete-option {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.autocomplete-option:hover {
+    background-color: #f0f0f0;
+}
